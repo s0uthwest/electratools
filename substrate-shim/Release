@@ -1,0 +1,8 @@
+Origin: Substrate Compatibility Layer
+Label: Substrate Compatibility Layer
+Suite: stable
+Version: 1.0
+Architectures: iphoneos-arm
+Components: main
+Codename: electrasubstrateshim
+Description: Contains a compatibility layer for substrate tweaks to work with substitute

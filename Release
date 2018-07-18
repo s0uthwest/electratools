@@ -1,0 +1,8 @@
+Origin: Electra's iOS Utilities
+Label: Electra's iOS Utilities
+Suite: stable
+Version: 1.0
+Architectures: iphoneos-arm
+Components: main
+Codename: electrarepo64
+Description: Core Utilities for Electra and other arm64 iOS jailbreaks
