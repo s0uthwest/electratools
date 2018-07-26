@@ -220,61 +220,60 @@ Description: flexible multi-protocol file transfers
 Name: cURL
 
 Package: cydia
-Version: 1.9
-Architecture: iphoneos-arm
+Version: 2.0
+Priority: required
+Section: Packaging
 Maintainer: CoolStar <coolstarorganization@gmail.com>
 Pre-Depends: debianutils, dpkg (>= 1.14.25-8)
-Depends: apt7-lib, apt7-key, cydia-lproj (>= 1.1.10), darwintools, debianutils, dpkg (>= 1.18), org.thebigboss.repo.icons, sed, shell-cmds, system-cmds, uikittools (>= 1.1.4), cy+cpu.arm64, cydia-upgrade-helper | cydia-gui
+Depends: cydia-gui, apt7-lib, apt7-key, cydia-lproj (>= 1.1.10), darwintools, debianutils, dpkg (>= 1.18), org.thebigboss.repo.icons, sed, shell-cmds, system-cmds, uikittools (>= 1.1.4), cy+cpu.arm64
 Conflicts: bigboss, bigbossbetarepo, com.sosiphone.addcydia, cydia-sources, ispazio.net, modmyifone, ste, yellowsn0w.com, zodttd
-Replaces: bigboss, bigbossbetarepo, com.sosiphone.addcydia, cydia-sources, ispazio.net, modmyifone, saurik, ste, yellowsn0w.com, zodttd
 Provides: bigbossbetarepo, cydia-sources
-Filename: debs/cydia_1.9_iphoneos-arm.deb
-Size: 98682
-MD5sum: 5a7c0823dd6812a28375d4014daaa17d
-SHA1: 88489055713af7f8ca4935db9ba7edf3b7fa3677
-SHA256: cf9c7d68921ca6517e83b3698533d5b80e9b3c3abfb383df3e2cefad62ad497b
-Section: Packaging
-Priority: required
+Replaces: bigboss, bigbossbetarepo, com.sosiphone.addcydia, cydia-sources, ispazio.net, modmyifone, saurik, ste, yellowsn0w.com, zodttd
+Architecture: iphoneos-arm
+Filename: debs/cydia_2.0_iphoneos-arm.deb
+Size: 98756
+MD5sum: 90f24a1b019fb6e5f24a2b3dcf7128ab
 Description: Base scripts and tools to set up Cydia-compatible virtual dependencies
 Tag: cydia::essential
-Author: CoolStar <coolstarorganization@gmail.com>
 Name: Cydia Compatibility Package
+Author: CoolStar <coolstarorganization@gmail.com>
 
 Package: cydia-gui
-Version: 1.1.30-2
-Architecture: iphoneos-arm
-Maintainer: CoolStar <coolstarorganization@gmail.com>
-Pre-Depends: cydia (>=1.9)
-Depends: cydia (>= 1.9), cy+cpu.arm64
-Filename: debs/cydia-gui_1.1.30-2_iphoneos-arm.deb
-Size: 1064722
-MD5sum: f8735a4575349bad470479053355af3f
-SHA1: 20b0d3ffc84b5f85b70eb2fca544f1c645ad18f4
-SHA256: 9d4f7239dcdec75f771d8bd12379b24e86b43d9a9fc395f7d3ccbf4f88898273
-Section: Packaging
+Version: 1.1.30-3
 Priority: required
-Description: graphical iPhone front-end for APT
-Tag: purpose::uikit, cydia::essential, role::enduser
-Author: Jay Freeman (saurik) <saurik@saurik.com>
-Depiction: http://cydia.saurik.com/info/cydia/
-Icon: file:///Applications/Cydia.app/Icon-60.png
-Name: Cydia (GUI Only)
-
-Package: cydia-upgrade-helper
-Version: 1.1-1
-Architecture: iphoneos-arm
+Section: Packaging
 Maintainer: CoolStar <coolstarorganization@gmail.com>
 Depends: cy+cpu.arm64
-Filename: debs/cydia-upgrade-helper_1.1-1_iphoneos-arm.deb
-Size: 1245946
-MD5sum: c04be233a0ed5fb407ae6c6bb82eb11d
-SHA1: c20454274d0bb5b0b3f43f3f433dbf6e01c1b124
-SHA256: 16e6f849ba58fcb19d99cc642c2eeea92f6434378261a138e911591d78849d94
+Replaces: cydia
+Architecture: iphoneos-arm
+Filename: debs/cydia-gui_1.1.30-3_iphoneos-arm.deb
+Size: 1064738
+MD5sum: 2648c62cea6a48e10b5590a59784915a
+Description: graphical iPhone front-end for APT
+Name: Cydia (GUI Only)
+Author: Jay Freeman (saurik) <saurik@saurik.com>
+Depiction: http://cydia.saurik.com/info/cydia/
+Tag: purpose::uikit, cydia::essential, role::enduser
+Icon: file:///Applications/Cydia.app/Icon-60.png
+
+Package: cydia-lproj
+Version: 1.1.12
+Priority: required
 Section: Packaging
-Description: Cydia is unable to install this update, so use a component of Sileo that can
-Tag: purpose::uikit,  role::enduser
-Author: CoolStar <coolstarorganization@gmail.com>
-Name: Cydia Update Helper
+Maintainer: Jay Freeman (saurik) <saurik@saurik.com>
+Depends: cydia
+Conflicts: org.thebigboss.russiancydia
+Provides: org.thebigboss.russiancydia
+Replaces: cydia, org.thebigboss.russiancydia
+Architecture: iphoneos-arm
+Filename: debs/cydia-lproj.deb
+Size: 66876
+Installed-Size: 712
+MD5sum: 50df4fbd8f163f553a5ba6e4e8fcad15
+Description: languages and translations for Cydia
+Name: Cydia Translations
+Author: Jay Freeman (saurik) <saurik@saurik.com>
+Depiction: http://cydia.saurik.com/info/cydia-lproj/
 
 Package: darwintools
 Version: 1-6
