@@ -219,6 +219,63 @@ Homepage: http://curl.haxx.se/
 Description: flexible multi-protocol file transfers
 Name: cURL
 
+Package: cydia
+Version: 1.9
+Architecture: iphoneos-arm
+Maintainer: CoolStar <coolstarorganization@gmail.com>
+Pre-Depends: debianutils, dpkg (>= 1.14.25-8)
+Depends: apt7-lib, apt7-key, cydia-lproj (>= 1.1.10), darwintools, debianutils, dpkg (>= 1.18), org.thebigboss.repo.icons, sed, shell-cmds, system-cmds, uikittools (>= 1.1.4), cy+cpu.arm64, cydia-upgrade-helper | cydia-gui
+Conflicts: bigboss, bigbossbetarepo, com.sosiphone.addcydia, cydia-sources, ispazio.net, modmyifone, ste, yellowsn0w.com, zodttd
+Replaces: bigboss, bigbossbetarepo, com.sosiphone.addcydia, cydia-sources, ispazio.net, modmyifone, saurik, ste, yellowsn0w.com, zodttd
+Provides: bigbossbetarepo, cydia-sources
+Filename: debs/cydia_1.9_iphoneos-arm.deb
+Size: 98682
+MD5sum: 5a7c0823dd6812a28375d4014daaa17d
+SHA1: 88489055713af7f8ca4935db9ba7edf3b7fa3677
+SHA256: cf9c7d68921ca6517e83b3698533d5b80e9b3c3abfb383df3e2cefad62ad497b
+Section: Packaging
+Priority: required
+Description: Base scripts and tools to set up Cydia-compatible virtual dependencies
+Tag: cydia::essential
+Author: CoolStar <coolstarorganization@gmail.com>
+Name: Cydia Compatibility Package
+
+Package: cydia-gui
+Version: 1.1.30-2
+Architecture: iphoneos-arm
+Maintainer: CoolStar <coolstarorganization@gmail.com>
+Pre-Depends: cydia (>=1.9)
+Depends: cydia (>= 1.9), cy+cpu.arm64
+Filename: debs/cydia-gui_1.1.30-2_iphoneos-arm.deb
+Size: 1064722
+MD5sum: f8735a4575349bad470479053355af3f
+SHA1: 20b0d3ffc84b5f85b70eb2fca544f1c645ad18f4
+SHA256: 9d4f7239dcdec75f771d8bd12379b24e86b43d9a9fc395f7d3ccbf4f88898273
+Section: Packaging
+Priority: required
+Description: graphical iPhone front-end for APT
+Tag: purpose::uikit, cydia::essential, role::enduser
+Author: Jay Freeman (saurik) <saurik@saurik.com>
+Depiction: http://cydia.saurik.com/info/cydia/
+Icon: file:///Applications/Cydia.app/Icon-60.png
+Name: Cydia (GUI Only)
+
+Package: cydia-upgrade-helper
+Version: 1.1-1
+Architecture: iphoneos-arm
+Maintainer: CoolStar <coolstarorganization@gmail.com>
+Depends: cy+cpu.arm64
+Filename: debs/cydia-upgrade-helper_1.1-1_iphoneos-arm.deb
+Size: 1245946
+MD5sum: c04be233a0ed5fb407ae6c6bb82eb11d
+SHA1: c20454274d0bb5b0b3f43f3f433dbf6e01c1b124
+SHA256: 16e6f849ba58fcb19d99cc642c2eeea92f6434378261a138e911591d78849d94
+Section: Packaging
+Description: Cydia is unable to install this update, so use a component of Sileo that can
+Tag: purpose::uikit,  role::enduser
+Author: CoolStar <coolstarorganization@gmail.com>
+Name: Cydia Update Helper
+
 Package: darwintools
 Version: 1-6
 Architecture: iphoneos-arm
